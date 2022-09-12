@@ -11,6 +11,11 @@
 }
 .header-top {
   background: #d3cbc5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   &__inner {
     display: flex;
     justify-content: center;
@@ -38,6 +43,10 @@
     font-size: 16px;
     line-height: 60px;
     color: #1b1a1a;
+    transition: all 0.6s ease-in-out;
+    &:hover {
+      border-bottom: 0.5px solid #1b1a1a;
+    }
   }
   &__nav {
     margin-left: auto;
@@ -108,7 +117,7 @@
     color: #878787;
   }
   &__wrap {
-    background: yellowgreen;
+    //background: yellowgreen;
     width: fit-content;
     height: fit-content;
     position: relative;
@@ -144,18 +153,301 @@
       content: "";
       background: #000;
     }
-    &:before{
+    &:before {
       width: 122px;
       height: 0.6px;
       bottom: 0;
       left: 0;
     }
-    &:after{
+    &:after {
       height: 45px;
       width: 0.6px;
       top: 0;
       right: 0;
     }
+  }
+}
+.slider {
+  &__wrapper {
+    padding: 94px 0 57px;
+  }
+  &__inner {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    //background: rgba(crimson, $alpha: .4);
+    .slick-slide > div {
+      width: 350px;
+      //border: 1px solid #000;
+      position: relative;
+      min-height: 449px;
+      margin: 0 auto;
+      .slider__item {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .slick-arrow {
+      position: absolute;
+      left: -74px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      //background: rgba(#000, .5);
+    }
+    .slick-next.slick-arrow {
+      right: -74px;
+      margin-left: auto;
+      width: fit-content;
+    }
+  }
+  &__item,
+  &__card {
+    max-width: 350px;
+    width: 100%;
+    min-height: 449px;
+  }
+  &__card {
+    background: #e5e6e6;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+  &__text {
+    max-width: 215px;
+    width: 100%;
+    @extend %NunitoSans-Regular-400;
+    font-size: 30px;
+    line-height: 40px;
+    color: #282828;
+    margin-bottom: 16px;
+    margin-left: 31px;
+  }
+  .header-body__shop {
+    color: #1b1a1a;
+    background: transparent;
+  }
+  .header-body__wrap {
+    margin-left: 36px;
+  }
+  &__img {
+    margin-left: auto;
+    margin-top: auto;
+  }
+}
+.team {
+  padding: 57px 0 91px;
+  &__subtitle {
+    margin-bottom: 21px;
+    color: #9a6437;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    @extend %NunitoSans-Regular-400;
+    font-size: 42px;
+    line-height: 60px;
+    color: #1b1a1a;
+  }
+  &__btn {
+    @extend %NunitoSans-Regular-400;
+    font-size: 16px;
+    //line-height: 60px;
+    color: #353535;
+    padding: 3px 19px;
+  }
+  &__btn--active {
+    @extend %NunitoSans-SemiBold-600;
+    background: #1c1b1b;
+    color: #fff;
+    border-radius: 4px;
+    transition: all 0.6s ease;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 39px;
+    margin-top: 34px;
+  }
+  &__card {
+    max-width: 255px;
+    width: 100%;
+    min-height: 345px;
+  }
+  &__head {
+    min-height: 275px;
+    background: #f7f7f7;
+    display: grid;
+    place-items: center;
+  }
+  &__content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+    background: #1c1b1b;
+    padding: 9px 0;
+  }
+  &__info {
+    min-height: auto;
+    padding-top: 6px;
+    //background: rgba($color: #000000, $alpha: 0.25);
+  }
+  &__info-title {
+    @extend %NunitoSans-SemiBold-600;
+    font-size: 18px;
+    line-height: 28px;
+    color: #282828;
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    column-gap: 9px;
+    @extend %NunitoSans-Regular-400;
+    font-size: 15px;
+    line-height: 28px;
+    color: #000;
+  }
+  &__price-old {
+    color: #737373;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #737373;
+      height: 1px;
+      width: 100%;
+    }
+  }
+}
+.clients {
+  background-image: url("../img/clients-bg.png");
+  background-repeat: no-repeat;
+  position: relative;
+  &::before{
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: rgba(14, 14, 14, 0.39);
+    z-index: 0;
+  }
+  &__inner {
+    padding: 73px 0 82px;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+  }
+  &__subtitle {
+    max-width: 278px;
+    padding: 0 65px;
+    margin: 0 auto;
+  }
+  .subtitle {
+    &:before {
+      background: #fff;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      right: 0;
+      width: 55px;
+      background: #fff;
+      height: 1.2px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__title {
+    @extend %NunitoSans-Regular-400;
+    font-size: 42px;
+    line-height: 60px;
+    color: #fff;
+  }
+}
+.footer-top {
+  background-image: url("../img/footer-bg.png");
+  padding: 88px 0 78px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  &__inner {
+    max-width: 423px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  &__title {
+    @extend %NunitoSans-Regular-400;
+    font-size: 36px;
+    line-height: 46px;
+    color: #1b1a1a;
+    margin: 15px auto 7px;
+  }
+  &__text {
+    max-width: 406px;
+    @extend %NunitoSans-Light-300;
+    font-size: 18px;
+    line-height: 28px;
+    color: #5e5e5e;
+  }
+  &__form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 17px;
+  }
+  &__input {
+    padding: 11px 13px 10px;
+    max-width: 275px;
+    width: 100%;
+    &::placeholder {
+      @extend %NunitoSans-Light-300;
+      font-size: 12px;
+      line-height: 28px;
+      color: #8e8e8e;
+    }
+  }
+  &__input,
+  &__btn {
+    border: 0.8px solid #5a5a5a;
+    border-radius: 4px;
+    background: transparent;
+  }
+  &__btn {
+    @extend %NunitoSans-Light-300;
+    font-size: 12px;
+    //line-height: 28px;
+    color: #1b1a1a;
+    padding: 11px 30px 10px;
+  }
+}
+.footer-bottom {
+  &__inner {
+    padding: 15px 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__copyright {
+    @extend %NunitoSans-Light-300;
+    font-size: 12px;
+    line-height: 28px;
+    color: #424242;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item + .footer-bottom__item {
+    margin-left: 21px;
   }
 }
 @import "media";
