@@ -33,3 +33,41 @@ button {
     transform: translateY(-50%);
   }
 }
+
+.slick-next.slick-arrow{
+  animation: arrow-next 4s ease-in-out 1s infinite alternate;
+  &:hover{
+    animation-play-state: paused;
+  }
+}
+
+.slick-prev.slick-arrow{
+  animation: arrow-prev 4s ease-in-out 1s infinite alternate;
+  &:hover{
+    animation-play-state: paused;
+  }
+}
+
+@keyframes arrow-prev {
+  0%{
+    transform: translateX(-25px);
+  }
+  50%{
+    transform: translateX(25px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
+
+@keyframes arrow-next {
+  0%{
+    transform: translateX(25px);
+  }
+  50%{
+    transform: translateX(-25px);
+  }
+  100%{
+    transform: translateX(0px);
+  }
+}
