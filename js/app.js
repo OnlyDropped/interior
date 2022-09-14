@@ -5,6 +5,24 @@ $('.slider__inner').slick({
   cssEase: 'linear',
   prevArrow: '<button type="button" class="slick-prev"><img src="img/slider/arrow-prev.svg" alt=""></button>',
   nextArrow: '<button type="button" class="slick-next"><img src="img/slider/arrow-next.svg" alt=""></button>',
+  responsive: [
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 2,
+        arrows: false,
+        centerMode: true,
+      }
+    },
+    {
+      breakpoint: 376,
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        centerMode: false,
+      }
+    }
+  ] 
 })
 
 const list = document.querySelectorAll('.team__btn')
@@ -22,4 +40,22 @@ $('.articles__slider').slick({
   cssEase: 'linear',
   prevArrow: '<button type="button" class="slick-prev"><img src="img/slider/arrow-prev.svg" alt=""></button>',
   nextArrow: '<button type="button" class="slick-next"><img src="img/slider/arrow-next.svg" alt=""></button>',
+  responsive: [
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 2,
+        arrows: false,
+        centerMode: true,
+      }
+    },
+    {
+      breakpoint: 376,
+      settings: {
+        slidesToShow: 1,
+        arrows: false,
+        centerMode: true,
+      }
+    }
+  ]
 })

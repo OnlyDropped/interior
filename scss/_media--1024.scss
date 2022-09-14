@@ -1,0 +1,126 @@
+@media (max-width: 1024px) {
+  .slider {
+    &__wrapper {
+      padding: 80px 0 40px;
+    }
+    &__inner {
+      max-width: 960px;
+      .slick-slide > div {
+        width: 315px;
+        border: 1px solid #000;
+        overflow: hidden;
+      }
+      .slick-next.slick-arrow,
+      .slick-prev.slick-arrow {
+        animation: none;
+      }
+      .slick-arrow {
+        left: -20px;
+      }
+      .slick-next.slick-arrow {
+        right: -20px;
+      }
+    }
+    &__item,
+    &__card {
+      max-width: 315px;
+    }
+  }
+  .team {
+    padding: 55px 0 80px;
+    &__title {
+      font-size: 40px;
+    }
+    &__card {
+      max-width: 310px;
+    }
+    &__wrapper {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+      row-gap: 25px;
+    }
+  }
+  .clients {
+    &__inner {
+      padding: 55px 0 70px;
+    }
+    &__title {
+      margin-bottom: 50px;
+    }
+    &__item {
+      max-width: 240px;
+    }
+    &__wrapper {
+      flex-wrap: wrap;
+      row-gap: 15px;
+    }
+    &__item {
+      max-width: 235px;
+      padding: 0 15px 29px;
+      &:hover {
+        transform: translateY(-25px);
+      }
+    }
+  }
+  .product {
+    &__inner {
+      padding: 50px 0 50px;
+    }
+    &__subtitle {
+      margin-bottom: 0;
+    }
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 15px;
+    }
+    &__info {
+      margin-top: 70px;
+      padding: 45px 25px;
+    }
+  }
+  .articles {
+    &__inner {
+      padding: 50px 0 85px;
+    }
+    &__subtitle {
+      margin: 0 auto;
+    }
+    &__slider {
+      max-width: 960px;
+      .slick-slide > div {
+        width: 315px;
+        border: 1px solid #000;
+        overflow: hidden;
+      }
+      .slick-next.slick-arrow,
+      .slick-prev.slick-arrow {
+        animation: none;
+      }
+      .slick-arrow {
+        left: -20px;
+      }
+      .slick-next.slick-arrow {
+        right: -20px;
+      }
+    }
+    &__item,
+    &__card {
+      max-width: 315px;
+      min-height: 450px;
+    }
+    &__images {
+      width: 315px;
+      height: 275px;
+    }
+    &__img {
+      width: 315px;
+      height: 275px;
+    }
+    &__info {
+      width: 315px;
+      padding: 20px 25px 15px;
+    }
+  }
+}
