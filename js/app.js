@@ -59,3 +59,10 @@ $('.articles__slider').slick({
     }
   ]
 })
+
+$(".header-top__menu").click(function() {
+  $(this).toggleClass("on");
+  $('.header-top__wrapper').toggleClass('header-top__wrapper--show');
+  $(".main-mnu").slideToggle();
+  return false;
+});
