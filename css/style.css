@@ -1383,6 +1383,7 @@ button {
     position: absolute;
     inset: 0;
     background: crimson;
+    background: steelblue;
     height: 100vh;
     width: 100%;
     margin: 0;
